@@ -6,6 +6,7 @@
     homebrew_taps:
       - homebrew/binary
       - homebrew/dupes
+      - homebrew/science
       - caskroom/cask
     homebrew_packages:
       - { name: openssl }
@@ -29,13 +30,12 @@
       - { name: boost }
       - { name: erlang }
       - { name: elixir }
-      - { name: gcc5 }
+      - { name: gcc }
       - { name: imagemagick }
       - { name: libjpeg }
       - { name: libpng }
       - { name: libtiff }
       - { name: libtool }
-      - { name: numpy }
       - { name: opencv }
       - { name: pkg-config }
       - { name: postgresql }
@@ -58,13 +58,13 @@
       - { name: dash }
       - { name: skitch }
       - { name: atom }
-      - { name: kobito }
       - { name: virtualbox }
       - { name: mactex }
       - { name: dropbox }
       - { name: evernote }
       - { name: bettertouchtool }
       - { name: microsoft-office }
+      - { name: xquartz }
       - { name: inkscape }
       - { name: appcleaner }
       - { name: github-desktop }
