@@ -1,0 +1,117 @@
+- hosts: localhost
+  connection: local
+  gather_facts: no
+  sudo: no
+  vars:
+    homebrew_taps:
+      - homebrew/binary
+      - homebrew/dupes
+      - caskroom/cask
+    homebrew_packages:
+      - { name: openssl }
+      - { name: openssl, state: linked, install_options: force }
+      - { name: python }
+      - { name: ansible }
+      - { name: git }
+      - { name: zsh, install_options: disable-etcdir }
+      - { name: wget }
+      - { name: curl }
+      - { name: cmake }
+      - { name: autoconf }
+      - { name: automake }
+      - { name: tree }
+      - { name: nkf }
+      - { name: tig }
+      - { name: rbenv }
+      - { name: ruby-build }
+      - { name: mysql }
+      - { name: sqlite }
+      - { name: boost }
+      - { name: erlang }
+      - { name: elixir }
+      - { name: gcc5 }
+      - { name: imagemagick }
+      - { name: libjpeg }
+      - { name: libpng }
+      - { name: libtiff }
+      - { name: libtool }
+      - { name: numpy }
+      - { name: opencv }
+      - { name: pkg-config }
+      - { name: postgresql }
+      - { name: qt5 }
+      - { name: readline }
+      - { name: sl }
+      - { name: tbb }
+      - { name: xz }
+      - { name: vim }
+
+    homebrew_cask_packages:
+      - { name: iterm2 }
+      - { name: google-chrome }
+      - { name: google-japanese-ime }
+      - { name: adobe-reader }
+      - { name: java }
+      - { name: skype }
+      - { name: slack }
+      - { name: karabiner }
+      - { name: dash }
+      - { name: skitch }
+      - { name: atom }
+      - { name: kobito }
+      - { name: virtualbox }
+      - { name: mactex }
+      - { name: dropbox }
+      - { name: evernote }
+      - { name: bettertouchtool }
+      - { name: microsoft-office }
+      - { name: inkscape }
+      - { name: appcleaner }
+      - { name: github-desktop }
+      - { name: lyrics-master }
+      - { name: sequel-pro }
+      - { name: cyberduck }
+      - { name: wireshark }
+      - { name: vlc }
+      - { name: skim }
+      - { name: world-of-tanks }
+      - { name: steam }
+
+  tasks:
+    - name: add tap repositories of homebrew
+      homebrew_tap: tap={{ item }} state=present
+      with_items: homebrew_taps
+
+    - name: update homebrew
+      homebrew: update_homebrew=yes
+
+    # brew
+    - name: install brew packages
+      homebrew: >
+        name={{ item.name }}
+        state={{ item.state | default('latest') }}
+        install_options={{
+          item.install_options | default() | join(',')
+          if item.install_options is not string
+          else item.install_options
+        }}
+      with_items: homebrew_packages
+      register: brew_result
+    - name: create directory for brew package information
+      file: path=brew_info state=directory
+    - name: save brew package information
+      shell: brew info {{ item }} > brew_info/{{ item }}
+      with_items: brew_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list
+
+    # cask
+    - name: install homebrew-cask
+      homebrew: name=brew-cask state=latest
+    - name: install cask packages
+      homebrew_cask: name={{ item.name }} state={{ item.state|default('installed') }}
+      with_items: homebrew_cask_packages
+      register: cask_result
+    - name: create directory for cask package information
+      file: path=cask_info state=directory
+    - name: save cask package information
+      shell: brew cask info {{ item }} > cask_info/{{ item }}
+      with_items: cask_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list
