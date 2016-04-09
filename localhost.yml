@@ -44,11 +44,13 @@
       - { name: sl }
       - { name: tbb }
       - { name: xz }
-      - { name: vim }
+      - { name: lua }
+      - { name: vim, install_options: with-lua }
 
     homebrew_cask_packages:
       - { name: iterm2 }
       - { name: google-chrome }
+      - { name: chrome-remote-desktop-host }
       - { name: google-japanese-ime }
       - { name: adobe-reader }
       - { name: java }
@@ -74,8 +76,9 @@
       - { name: wireshark }
       - { name: vlc }
       - { name: skim }
-      - { name: world-of-tanks }
+      - { name: gimp }
       - { name: steam }
+      - { name: alcatraz }
 
   tasks:
     - name: add tap repositories of homebrew
