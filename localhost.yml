@@ -46,6 +46,7 @@
       - { name: xz }
       - { name: lua }
       - { name: vim, install_options: with-lua }
+      - { name: git-cal }
 
     homebrew_cask_packages:
       - { name: iterm2 }
