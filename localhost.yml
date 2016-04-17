@@ -48,6 +48,8 @@
       - { name: vim, install_options: with-lua }
       - { name: git-cal }
       - { name: peco }
+      - { name: httperf }
+      - { name: autobench }
 
     homebrew_cask_packages:
       - { name: iterm2 }
