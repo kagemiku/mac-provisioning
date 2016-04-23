@@ -4,7 +4,7 @@ Provisioning files for Mac.
 # Usage
 ## At the 1st time
 ```
-$ curl -fsL https://raw.githubusercontent.com/kagemiku/mac-provisioning/master/install.sh > sh
+$ curl -fsL https://raw.githubusercontent.com/kagemiku/mac-provisioning/master/install.sh | sh
 ```
 
 ## After the 2nd time
