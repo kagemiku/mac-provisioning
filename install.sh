@@ -1,9 +1,4 @@
 #!/bin/sh
-echo "install xcode tools..."
-sudo xcodebuild -license; sudo xcode-select --install \
-    && echo "success" \
-    || { echo "failure"; exit 1; }
-
 echo "clone mac-provisioning repository..."
 git clone https://github.com/kagemiku/mac-provisioning.git mac-provisioning \
     && cd mac-provisioning \
