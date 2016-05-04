@@ -83,6 +83,7 @@
       - { name: gimp }
       - { name: steam }
       - { name: alcatraz }
+      - { name: blu-ray-player }
 
   tasks:
     - name: add tap repositories of homebrew
