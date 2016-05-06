@@ -52,6 +52,7 @@
       - { name: autobench }
       - { name: node }
       - { name: redis }
+      - { name: pyenv }
 
     homebrew_cask_packages:
       - { name: iterm2 }
