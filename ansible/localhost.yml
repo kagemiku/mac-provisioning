@@ -50,6 +50,8 @@
       - { name: peco }
       - { name: httperf }
       - { name: autobench }
+      - { name: node }
+      - { name: redis }
 
     homebrew_cask_packages:
       - { name: iterm2 }
