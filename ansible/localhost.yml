@@ -88,6 +88,7 @@
       - { name: steam }
       - { name: alcatraz }
       - { name: blu-ray-player }
+      - { name: intel-power-gadget }
 
   tasks:
     - name: add tap repositories of homebrew
