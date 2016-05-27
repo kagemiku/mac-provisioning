@@ -67,6 +67,7 @@
       - { name: karabiner }
       - { name: dash }
       - { name: skitch }
+      - { name: sketch }
       - { name: atom }
       - { name: virtualbox }
       - { name: mactex }
