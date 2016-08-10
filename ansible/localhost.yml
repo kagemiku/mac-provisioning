@@ -54,6 +54,7 @@
       - { name: redis }
       - { name: pyenv }
       - { name: heroku-toolbelt }
+      - { name: thefuck }
 
     homebrew_cask_packages:
       - { name: iterm2 }
