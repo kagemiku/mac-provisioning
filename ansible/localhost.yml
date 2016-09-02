@@ -55,6 +55,7 @@
       - { name: pyenv }
       - { name: heroku-toolbelt }
       - { name: thefuck }
+      - { name: go }
 
     homebrew_cask_packages:
       - { name: iterm2 }
