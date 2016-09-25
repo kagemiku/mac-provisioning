@@ -63,7 +63,6 @@
       - { name: google-chrome }
       - { name: chrome-remote-desktop-host }
       - { name: google-japanese-ime }
-      - { name: adobe-reader }
       - { name: java }
       - { name: skype }
       - { name: slack }
