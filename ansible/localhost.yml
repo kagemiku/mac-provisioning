@@ -89,7 +89,6 @@
       - { name: vlc }
       - { name: skim }
       - { name: gimp }
-      - { name: steam }
       - { name: alcatraz }
       - { name: intel-power-gadget }
 
