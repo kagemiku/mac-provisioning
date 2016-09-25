@@ -1,7 +1,7 @@
 - hosts: localhost
   connection: local
   gather_facts: no
-  sudo: no
+  become: no
   vars:
     homebrew_taps:
       - homebrew/binary
@@ -94,7 +94,7 @@
   tasks:
     - name: add tap repositories of homebrew
       homebrew_tap: tap={{ item }} state=present
-      with_items: homebrew_taps
+      with_items: "{{ homebrew_taps }}"
 
     - name: update homebrew
       homebrew: update_homebrew=yes
@@ -109,23 +109,23 @@
           if item.install_options is not string
           else item.install_options
         }}
-      with_items: homebrew_packages
+      with_items: "{{ homebrew_packages }}"
       register: brew_result
     - name: create directory for brew package information
       file: path=brew_info state=directory
     - name: save brew package information
       shell: brew info {{ item }} > brew_info/{{ item }}
-      with_items: brew_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list
+      with_items: "{{ brew_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list }}"
 
     # cask
     - name: install homebrew-cask
       homebrew: name=cask state=latest
     - name: install cask packages
       homebrew_cask: name={{ item.name }} state={{ item.state|default('installed') }}
-      with_items: homebrew_cask_packages
+      with_items: "{{ homebrew_cask_packages }}"
       register: cask_result
     - name: create directory for cask package information
       file: path=cask_info state=directory
     - name: save cask package information
       shell: brew cask info {{ item }} > cask_info/{{ item }}
-      with_items: cask_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list
+      with_items: "{{ cask_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list }}"
