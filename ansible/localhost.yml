@@ -90,6 +90,7 @@
       - { name: gimp }
       - { name: alcatraz }
       - { name: intel-power-gadget }
+      - { name: racket }
 
   tasks:
     - name: add tap repositories of homebrew
