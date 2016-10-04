@@ -57,6 +57,7 @@
       - { name: thefuck }
       - { name: go }
       - { name: carthage }
+      - { name: ant }
 
     homebrew_cask_packages:
       - { name: iterm2 }
