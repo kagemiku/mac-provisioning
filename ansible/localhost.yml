@@ -58,6 +58,7 @@
       - { name: go }
       - { name: carthage }
       - { name: ant }
+      - { name: shared-mime-info }
 
     homebrew_cask_packages:
       - { name: iterm2 }
