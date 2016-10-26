@@ -59,6 +59,7 @@
       - { name: carthage }
       - { name: ant }
       - { name: shared-mime-info }
+      - { name: redis }
 
     homebrew_cask_packages:
       - { name: iterm2 }
