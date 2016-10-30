@@ -53,6 +53,7 @@
       - { name: node }
       - { name: redis }
       - { name: pyenv }
+      - { name: pyenv-virtualenv }
       - { name: heroku-toolbelt }
       - { name: thefuck }
       - { name: go }
