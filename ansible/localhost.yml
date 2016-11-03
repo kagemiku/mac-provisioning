@@ -61,6 +61,8 @@
       - { name: ant }
       - { name: shared-mime-info }
       - { name: redis }
+      - { name: ctags }
+      - { name: the_silver_searcher }
 
     homebrew_cask_packages:
       - { name: iterm2 }
