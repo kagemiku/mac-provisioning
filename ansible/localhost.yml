@@ -62,6 +62,7 @@
       - { name: shared-mime-info }
       - { name: ctags }
       - { name: the_silver_searcher }
+      - { name: hub }
 
     homebrew_cask_packages:
       - { name: iterm2 }
