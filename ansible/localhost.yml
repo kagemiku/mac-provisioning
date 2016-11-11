@@ -60,7 +60,6 @@
       - { name: carthage }
       - { name: ant }
       - { name: shared-mime-info }
-      - { name: redis }
       - { name: ctags }
       - { name: the_silver_searcher }
 
