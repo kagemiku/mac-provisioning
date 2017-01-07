@@ -98,6 +98,7 @@
       - { name: alcatraz }
       - { name: intel-power-gadget }
       - { name: racket }
+      - { name: astah-professional }
 
   tasks:
     - name: add tap repositories of homebrew
