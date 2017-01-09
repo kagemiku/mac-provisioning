@@ -99,6 +99,7 @@
       - { name: intel-power-gadget }
       - { name: racket }
       - { name: astah-professional }
+      - { name: google-drive }
 
   tasks:
     - name: add tap repositories of homebrew
