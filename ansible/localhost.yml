@@ -64,6 +64,7 @@
       - { name: the_silver_searcher }
       - { name: hub }
       - { name: swi-prolog }
+      - { name: jq }
 
     homebrew_cask_packages:
       - { name: iterm2 }
