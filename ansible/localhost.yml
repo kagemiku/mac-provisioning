@@ -65,6 +65,7 @@
       - { name: hub }
       - { name: swi-prolog }
       - { name: jq }
+      - { name: swiftlint }
 
     homebrew_cask_packages:
       - { name: iterm2 }
