@@ -66,6 +66,7 @@
       - { name: swi-prolog }
       - { name: jq }
       - { name: swiftlint }
+      - { name: kylef/formulae/swiftenv }
 
     homebrew_cask_packages:
       - { name: iterm2 }
