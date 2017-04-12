@@ -31,7 +31,7 @@ cd ansible \
     || { echo "failure"; exit 1; }
 
 echo "installing zplug..."
-git clone https://github.com/b4b4r07/zplug ~/.zplug \
+git clone https://github.com/zplug/zplug ~/.zplug \
     && chsh -s /bin/zsh \
     && echo "success" \
     || { echo "failure"; exit 1; }
