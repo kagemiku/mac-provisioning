@@ -67,6 +67,7 @@
       - { name: jq }
       - { name: swiftlint }
       - { name: kylef/formulae/swiftenv }
+      - { name: sbt }
 
     homebrew_cask_packages:
       - { name: iterm2 }
