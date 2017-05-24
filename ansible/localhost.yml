@@ -104,6 +104,7 @@
       - { name: racket }
       - { name: astah-professional }
       - { name: google-drive }
+      - { name: mendeley-desktop }
 
   tasks:
     - name: add tap repositories of homebrew
