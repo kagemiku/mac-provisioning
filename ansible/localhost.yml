@@ -105,6 +105,7 @@
       - { name: astah-professional }
       - { name: google-drive }
       - { name: mendeley-desktop }
+      - { name: docker }
 
   tasks:
     - name: add tap repositories of homebrew
