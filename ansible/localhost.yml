@@ -68,6 +68,8 @@
       - { name: swiftlint }
       - { name: kylef/formulae/swiftenv }
       - { name: sbt }
+      - { name: awscli }
+      - { name: yarn }
 
     homebrew_cask_packages:
       - { name: iterm2 }
