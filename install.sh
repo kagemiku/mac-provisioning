@@ -36,5 +36,14 @@ git clone https://github.com/zplug/zplug ~/.zplug \
     && echo "success" \
     || { echo "failure"; exit 1; }
 
+echo "installing fonts..."
+mkdir -p ~/repositories/github \
+    && git clone https://github.com/powerline/fonts.git ~/repositories/github/fonts \
+    && cd ~/repositories/github/fonts \
+    && ./install.sh \
+    && cd - \
+    && echo "success" \
+    || { echo "failure"; exit 1; }
+
 exit 0
 
