@@ -51,6 +51,7 @@
       - { name: httperf }
       - { name: autobench }
       - { name: node }
+      - { name: nodenv }
       - { name: redis }
       - { name: pyenv }
       - { name: pyenv-virtualenv }
