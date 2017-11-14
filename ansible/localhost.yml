@@ -8,6 +8,7 @@
       - homebrew/dupes
       - homebrew/science
       - caskroom/cask
+      - soracom/soracom-cli
     homebrew_packages:
       - { name: openssl }
       - { name: openssl, state: linked, install_options: force }
@@ -71,6 +72,7 @@
       - { name: sbt }
       - { name: awscli }
       - { name: yarn }
+      - { name: soracom-cli }
 
     homebrew_cask_packages:
       - { name: iterm2 }
