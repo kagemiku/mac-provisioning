@@ -82,7 +82,7 @@
       - { name: java }
       - { name: skype }
       - { name: slack }
-      - { name: karabiner }
+      - { name: karabiner-elements }
       - { name: dash }
       - { name: skitch }
       - { name: sketch }
