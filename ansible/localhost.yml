@@ -29,6 +29,7 @@
       - { name: mysql }
       - { name: sqlite }
       - { name: boost }
+      - { name: boost-python, install_options: with-python3 }
       - { name: erlang }
       - { name: elixir }
       - { name: gcc }
