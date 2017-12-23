@@ -74,6 +74,7 @@
       - { name: awscli }
       - { name: yarn }
       - { name: soracom-cli }
+      - { name: dep }
 
     homebrew_cask_packages:
       - { name: iterm2 }
