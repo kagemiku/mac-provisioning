@@ -110,7 +110,6 @@
       - { name: intel-power-gadget }
       - { name: racket }
       - { name: astah-professional }
-      - { name: google-backup-and-sync }
       - { name: mendeley-desktop }
       - { name: docker }
 
