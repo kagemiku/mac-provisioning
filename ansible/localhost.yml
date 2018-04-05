@@ -112,6 +112,7 @@
       - { name: astah-professional }
       - { name: mendeley-desktop }
       - { name: docker }
+      - { name: discord }
 
   tasks:
     - name: add tap repositories of homebrew
