@@ -113,6 +113,7 @@
       - { name: mendeley-desktop }
       - { name: docker }
       - { name: discord }
+      - { name: hyperswitch }
 
   tasks:
     - name: add tap repositories of homebrew
