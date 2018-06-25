@@ -73,6 +73,7 @@
       - { name: soracom-cli }
       - { name: dep }
       - { name: kubernetes-helm }
+      - { name: presto }
 
     homebrew_cask_packages:
       - { name: iterm2 }
