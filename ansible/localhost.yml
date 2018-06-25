@@ -72,6 +72,7 @@
       - { name: yarn }
       - { name: soracom-cli }
       - { name: dep }
+      - { name: kubernetes-helm }
 
     homebrew_cask_packages:
       - { name: iterm2 }
@@ -111,6 +112,7 @@
       - { name: docker }
       - { name: discord }
       - { name: hyperswitch }
+      - { name: google-cloud-sdk }
 
   tasks:
     - name: add tap repositories of homebrew
