@@ -4,10 +4,7 @@
   become: no
   vars:
     homebrew_taps:
-      - homebrew/binary
-      - homebrew/dupes
-      - homebrew/science
-      - caskroom/cask
+      - homebrew/cask
       - soracom/soracom-cli
     homebrew_packages:
       - { name: openssl }
