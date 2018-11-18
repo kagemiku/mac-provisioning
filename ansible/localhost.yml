@@ -110,6 +110,83 @@
       - { name: hyperswitch }
       - { name: google-cloud-sdk }
 
+    mac_defaults_settings:
+      - {
+        domain: NSGlobalDomain,
+        key: AppleShowAllExtensions,
+        type: bool,
+        value: true,
+      }
+      - {
+        domain: com.apple.AppleMultitouchTrackpad,
+        key: Clicking,
+        type: int,
+        value: 1,
+      }
+      - {
+        domain: com.apple.AppleMultitouchTrackpad,
+        key: TrackpadFourFingerHorizSwipeGesture,
+        type: int,
+        value: 2,
+      }
+      - {
+        domain: com.apple.driver.AppleBluetoothMultitouch.trackpad,
+        key: TrackpadFourFingerHorizSwipeGesture,
+        type: int,
+        value: 2,
+      }
+      - {
+        domain: com.apple.dock,
+        key: mru-spaces,
+        type: bool,
+        value: false,
+      }
+      - {
+        domain: com.apple.dock,
+        key: wvous-bl-corner,
+        type: int,
+        value: 13,
+      }
+      - {
+        domain: com.apple.dock,
+        key: wvous-br-corner,
+        type: int,
+        value: 4,
+      }
+      - {
+        domain: com.apple.finder,
+        key: AppleShowAllFiles,
+        type: bool,
+        value: true,
+      }
+
+    mac_global_domain_defaults_settings:
+      - {
+        key: com.apple.keyboard.fnState,
+        type: bool,
+        value: true,
+      }
+      - {
+        key: InitialKeyRepeat,
+        type: int,
+        value: 15,
+      }
+      - {
+        key: KeyRepeat,
+        type: int,
+        value: 2,
+      }
+      - {
+        key: NSAutomaticCapitalizationEnabled,
+        type: bool,
+        value: false,
+      }
+      - {
+        key: NSAutomaticSpellingCorrectionEnabled,
+        type: bool,
+        value: false,
+      }
+
   tasks:
     - name: add tap repositories of homebrew
       homebrew_tap: tap={{ item }} state=present
@@ -148,4 +225,17 @@
     - name: save brew package information
       shell: brew info {{ item }} > brew_info/{{ item }}
       with_items: "{{ brew_result.results | selectattr('changed') | map(attribute='item') | map(attribute='name') | list }}"
+
+    # mac defaults
+    - name:
+      command: >
+        defaults write {{ item.domain }} {{ item.key }} -{{ item.type }} {{ item.value }}
+      with_items: mac_defaults_settings
+      when: mac_defaults_settings
+
+    - name:
+      command: >
+        defaults write -g {{ item.key }} -{{ item.type }} {{ item.value }}
+      with_items: mac_global_domain_defaults_settings
+      when: mac_global_domain_defaults_settings
 
