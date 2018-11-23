@@ -71,6 +71,7 @@
       - { name: dep }
       - { name: kubernetes-helm }
       - { name: presto }
+      - { name: ghq }
 
     homebrew_cask_packages:
       - { name: iterm2 }
