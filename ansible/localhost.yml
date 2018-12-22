@@ -6,6 +6,7 @@
     homebrew_taps:
       - homebrew/cask
       - soracom/soracom-cli
+      - ktr0731/evans
     homebrew_packages:
       - { name: openssl }
       - { name: openssl, state: linked, install_options: force }
@@ -73,6 +74,7 @@
       - { name: presto }
       - { name: ghq }
       - { name: protobuf }
+      - { name: evans }
 
     homebrew_cask_packages:
       - { name: iterm2 }
