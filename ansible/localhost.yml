@@ -75,6 +75,7 @@
       - { name: ghq }
       - { name: protobuf }
       - { name: evans }
+      - { name: ascii }
 
     homebrew_cask_packages:
       - { name: iterm2 }
