@@ -76,6 +76,7 @@
       - { name: protobuf }
       - { name: evans }
       - { name: ascii }
+      - { name: kotlin }
 
     homebrew_cask_packages:
       - { name: iterm2 }
