@@ -5,7 +5,6 @@
   vars:
     homebrew_taps:
       - homebrew/cask
-      - soracom/soracom-cli
       - ktr0731/evans
     homebrew_packages:
       - { name: openssl }
@@ -54,7 +53,6 @@
       - { name: redis }
       - { name: pyenv }
       - { name: pyenv-virtualenv }
-      - { name: heroku-toolbelt }
       - { name: thefuck }
       - { name: go }
       - { name: carthage }
@@ -68,10 +66,7 @@
       - { name: sbt }
       - { name: awscli }
       - { name: yarn }
-      - { name: soracom-cli }
       - { name: dep }
-      - { name: kubernetes-helm }
-      - { name: presto }
       - { name: ghq }
       - { name: protobuf }
       - { name: evans }
@@ -81,26 +76,19 @@
     homebrew_cask_packages:
       - { name: iterm2 }
       - { name: google-chrome }
-      - { name: chrome-remote-desktop-host }
       - { name: google-japanese-ime }
       - { name: java }
-      - { name: skype }
       - { name: slack }
       - { name: karabiner-elements }
       - { name: dash }
       - { name: skitch }
       - { name: sketch }
-      - { name: atom }
       - { name: virtualbox }
       - { name: mactex }
-      - { name: dropbox }
-      - { name: evernote }
       - { name: bettertouchtool }
-      - { name: microsoft-office }
       - { name: xquartz }
       - { name: inkscape }
       - { name: appcleaner }
-      - { name: github-desktop }
       - { name: lyrics-master }
       - { name: sequel-pro }
       - { name: cyberduck }
@@ -110,7 +98,6 @@
       - { name: gimp }
       - { name: intel-power-gadget }
       - { name: racket }
-      - { name: astah-professional }
       - { name: docker }
       - { name: discord }
       - { name: hyperswitch }
