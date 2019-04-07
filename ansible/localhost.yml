@@ -102,6 +102,7 @@
       - { name: discord }
       - { name: hyperswitch }
       - { name: google-cloud-sdk }
+      - { name: fastlane }
 
     mac_defaults_settings:
       - {
