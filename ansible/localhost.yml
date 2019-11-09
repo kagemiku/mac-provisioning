@@ -12,7 +12,7 @@
       - { name: python }
       - { name: ansible }
       - { name: git }
-      - { name: zsh, install_options: disable-etcdir }
+      - { name: zsh }
       - { name: wget }
       - { name: curl }
       - { name: cmake }
@@ -43,7 +43,7 @@
       - { name: tbb }
       - { name: xz }
       - { name: lua }
-      - { name: vim, install_options: with-lua }
+      - { name: vim }
       - { name: git-cal }
       - { name: peco }
       - { name: httperf }
