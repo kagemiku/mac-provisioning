@@ -103,6 +103,7 @@
       - { name: hyperswitch }
       - { name: google-cloud-sdk }
       - { name: fastlane }
+      - { name: ngrok }
 
     mac_defaults_settings:
       - {
