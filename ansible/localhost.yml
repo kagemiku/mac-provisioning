@@ -72,6 +72,7 @@
       - { name: evans }
       - { name: ascii }
       - { name: kotlin }
+      - { name: rust }
 
     homebrew_cask_packages:
       - { name: iterm2 }
