@@ -13,7 +13,7 @@ git clone https://github.com/kagemiku/dotfiles.git ~/dotfiles \
     || { echo "failure"; exit 1; }
 
 echo "installing homebrew..."
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" \
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)" \
     && echo "success" \
     || { echo "failure"; exit 1; }
 

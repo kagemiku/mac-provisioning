@@ -65,12 +65,13 @@
       - { name: ascii }
       - { name: kotlin }
       - { name: rustup }
+      - { name: fastlane }
+      - { name: java }
 
     homebrew_cask_packages:
       - { name: iterm2 }
       - { name: google-chrome }
       - { name: google-japanese-ime }
-      - { name: java }
       - { name: slack }
       - { name: karabiner-elements }
       - { name: sketch }
@@ -81,7 +82,6 @@
       - { name: discord }
       - { name: hyperswitch }
       - { name: google-cloud-sdk }
-      - { name: fastlane }
       - { name: ngrok }
 
     mac_defaults_settings:
