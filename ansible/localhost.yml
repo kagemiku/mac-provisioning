@@ -67,6 +67,7 @@
       - { name: rustup }
       - { name: fastlane }
       - { name: java }
+      - { name: gh }
 
     homebrew_cask_packages:
       - { name: iterm2 }
@@ -83,6 +84,8 @@
       - { name: hyperswitch }
       - { name: google-cloud-sdk }
       - { name: ngrok }
+      - { name: 1password }
+      - { name: authy }
 
     mac_defaults_settings:
       - {
